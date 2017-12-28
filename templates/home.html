@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block head %}
+{{super()}}
+{% endblock %}
+{% block body %}
+  {{super()}}
+    <div class="content input">
+      <a href="{{url_for('new_purchase')}}"><button class="btn btn-primary">Add Purchase</button></a>
+    </div>
+    <div class ="content input">
+      <a href="{{url_for('add_category')}}"><button class="btn btn-info">Add Category</button></a>
+    </div>
+    <div class="row">
+      <div id="cats" class="col-md-3">
+        <h2>Categories: </h2>
+      </div>
+      <div id="purchases" class="col-md-4">
+        <h2>Purchases:</h2>
+      </div>
+      <div class="col-md-5">
+        <h2>Total of Uncategorized Purchases:</h2>
+        <p id='total'>$ 0.00 </p>
+      </div>
+    </div>
+{% endblock %}

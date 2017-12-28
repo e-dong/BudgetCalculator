@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block head %}
+{{super()}}
+{% endblock %}
+{% block body %}
+{{super()}}
+<div class="content" id="purchase-form">
+  <form action="" method="post">
+		<label for="amount">Amount Spent</label>
+		<div class="input">$  <input id="amount" type="text" name="amount" /></div>
+		<label for="item">Item Puchased</label>
+		<div class="input"><input id="item" type="text" name="item" /></div>
+  	<label for="date">Date Puchased</label>
+		<div class="input"><input id="date" type="date" name="date" min="{{min_date}}" max="{{max_date}}"/></div>
+    <label for="category">Category</label>
+    <div class="input">
+      {% for catName in catNames %}
+      <input class="radioButton" type="radio" name="category" value="{{catName}}">
+      <label>{{catName}}</label>
+      {# <input id="category" type="text" name="category" /> #}
+      {% endfor %}
+    </div>
+		<div class="input"><input id="makePurchase" class="btn btn-success" type="submit" value="submit" /></div>
+	</form>
+  <a href="{{url_for('default')}}"><button class="btn btn-default">Back</button></a>
+</div>
+{% endblock %}

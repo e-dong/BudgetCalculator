@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <div class="container">
+  {% block head %}
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <script src="{{url_for('static', filename='client.js')}}"></script>
+    <title>My Budget Application</title>
+  </head>
+  {% endblock %}
+  {% block body %}
+  {# <div class="container"> #}
+    <body>
+      {% with messages = get_flashed_messages() %}
+     {% if messages %}
+       <ul class=flashes>
+       {% for message in messages %}
+         {% if success_message %}
+           <div class="row">
+             <div class="message col-md-12" style="background-color: green;"><p style="text-align: center;"><strong>{{ message }}</strong></p></div>
+          </div>
+         {% else %}
+         <div class="row">
+           <div class="message col-md-12" style="background-color: red;"><p style="text-align: center;"><strong>{{ message }}</strong></p></div>
+         </div>
+         {% endif %}
+       {% endfor %}
+       </ul>
+     {% endif %}
+    {% endwith %}
+      <div class="text-center">
+        <h1>Budget Summary</h1>
+      </div>
+    </body>
+  {# </div> #}
+  {% endblock %}
+</div>
+</html>

@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block head %}
+{{super()}}
+{% endblock %}
+{% block body %}
+{{super()}}
+<div class="content" id="purchase-form">
+  <form action="" method="post">
+		<label for="categoryName">Name of Category</label>
+		<div class="input"><input id="catName" type="text" name="categoryName" /></div>
+		<label for="budget">Budget Limit</label>
+		<div class="input"><input id="budget" type="text" name="budget" /></div>
+		<div class="input">
+      <input id="makeCategory" class="btn btn-success" type="submit" value="submit" />
+    </div>
+	</form>
+  <a href="{{url_for('default')}}"><button class="btn btn-default">Back</button></a>
+</div>
+{% endblock %}
