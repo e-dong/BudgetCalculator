@@ -6,7 +6,7 @@ Calculates Budget for the month, using Flask and AJAX to implement a restful ser
 1. From the root of the repository run 'pip install -r requirements.txt'  
 1. Add the 'FLASK_APP' variable to your path. (e.g 'export FLASK_APP=budget.py')  
 ## Executing the App  
-Start the application via 'flask run'  
+Start the application via 'flask run' and navigate to localhost:5000 in a web browser of your choice.
 
 ## Notes  
 Right after a POST request for /cats or /purchases,  
@@ -19,3 +19,5 @@ There will also be a red 'flash' that notifies the user
 that she/he has run out of money for that category.  
 
 Overall, the app is fully functional with input validation.  
+## Screenshot  
+![alt text](screenshot.png "budget_screenshot")  
