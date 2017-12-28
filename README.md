@@ -1,7 +1,5 @@
-# money-on-my-mind-and-my-mind-on-my-rest-api-e-dong  
-# Assignment 5  
-Name: Eric Dong  
-Pitt ID: esd15  
+# Budget Calculator  
+Calculates Budget for the month, using Flask and AJAX to implement a restful service.  
 
 ## Installation  
 1. Create a virtual environment for Python  
