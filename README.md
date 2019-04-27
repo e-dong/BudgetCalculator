@@ -8,6 +8,9 @@ Calculates Budget for the month, using Flask and AJAX to implement a restful ser
 ## Executing the App  
 Start the application via 'flask run' and navigate to localhost:5000 in a web browser of your choice.
 
+## Bugs
+Input validation seems to be broken. Since this was an old college project, I will not update this
+
 ## Notes  
 Right after a POST request for /cats or /purchases,  
 the app will redirect from the form page to the home page,  
